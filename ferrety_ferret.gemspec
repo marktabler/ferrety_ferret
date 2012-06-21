@@ -1,5 +1,4 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/ferrety_ferret/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Mark Tabler\n"]
@@ -13,5 +12,5 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "ferrety_ferret"
   gem.require_paths = ["lib"]
-  gem.version       = FerretyFerret::VERSION
+  gem.version       = "0.0.3"
 end
