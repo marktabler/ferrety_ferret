@@ -1,4 +1,3 @@
-require "ferrety_ferret/version"
 require "httparty"
 module Ferrety
   
@@ -7,7 +6,7 @@ module Ferrety
 
     def initialize(params)
       clear_alerts
-      params = parse(params)
+      @params = parse(params)
     end
 
     private
