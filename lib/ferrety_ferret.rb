@@ -1,17 +1,22 @@
 require "ferrety_ferret/version"
 require "httparty"
 module Ferrety
-
+  
   class Ferret
     attr_accessor :alerts
-    def initialize
-      @alerts = []
+
+    def initialize(params)
+      clear_alerts
     end
 
     private
 
     def add_alert(alert_text)
       @alerts << alert_text
+    end
+
+    def clear_alerts
+      @alerts = []
     end
 
   end
