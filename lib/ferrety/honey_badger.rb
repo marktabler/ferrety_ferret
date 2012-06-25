@@ -1,14 +1,21 @@
 module Ferrety
   class HoneyBadger < Ferret
+    attr_accessor :term, :url
 
-    def search(term, url)
-      page = fetch_page(url)
-      if page.upcase.scan(term.upcase).any?
+    def initialize(params)
+      super
+      @term = @params["term"]
+      @url = @params[":url"]
+    end
+
+
+    def search
+      if fetched_page.upcase.scan(term.upcase).any?
         add_alert("The page at #{url} matched the term #{term}")
       end
     end
 
-    def fetch_page(url)
+    def fetched_page
       HTTParty.get(url)
     end
   end

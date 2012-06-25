@@ -6,6 +6,6 @@ end
 require 'bundler'
 Bundler.require
 
-require './lib/ferrety_ferret'
+require './lib/ferrety'
 
 

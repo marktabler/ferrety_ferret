@@ -5,7 +5,7 @@ module Ferrety
     attr_accessor :alerts
 
     def initialize(params)
-      clear_alerts
+      @alerts = []
       @params = parse(params)
     end
 
