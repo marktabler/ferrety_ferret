@@ -13,6 +13,7 @@ module Ferrety
       if fetched_page.upcase.scan(@term.upcase).any?
         add_alert("The page at #{@url} matched the term #{@term}")
       end
+      @alerts
     end
 
     def fetched_page
